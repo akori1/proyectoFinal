@@ -1,6 +1,6 @@
 templateContainer = $('#templates'),
 taskTemplate = '';
-templateContainer.find('#todoTemplate').load('/public/templates/templateGrilla.html', function(tmpl){
+templateContainer.find('#todoTemplate').load('/templates/templateGrilla.html', function(tmpl){
 	taskTemplate = tmpl;
 });
 
@@ -36,11 +36,6 @@ function users(data){
 	}
 	
 	$('#listaPersonas tbody').append(ruta);
-	$('#listaPersonas tbody').on("click", "button", function () {
-		url = "public/html/editar.html";
-      	var id =($(this).attr("data-id"));
-      	$(location).attr("href", url);
-	})
 }
 
 

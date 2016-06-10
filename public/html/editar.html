@@ -1,17 +1,131 @@
-<!DOCTYPE html>
 <html>
 <head>
+	<title>Editar</title>
+
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="css/estilo.css">
-	<link rel="stylesheet" type="text/css" href="css/animacion.css">
+	<link rel="stylesheet" type="text/css" href="../css/estilo.css">
+	<link rel="stylesheet" type="text/css" href="../css/animacion.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<title></title>
 </head>
 <body>
-	estas en el editar html
 
+	<div class="template-menu container" id="template-menu">
+	
+		
+	</div>	
+			
+
+			   <div class="container">
+
+    <div class="col-md-12 col-xs-12 CajaInicio animated bounceInRight cajaArriba">
+     <h1>Editar Persona </h1>
+
+     <form id="form-control"  enctype="multipart/form-data" >
+      <div class="row">
+       <div class="col-md-12 col-xs-12">
+        <label for="firstName"></label>
+        <input type="text" class="firstName" name="firstName" placeholder="Ingrese apellido.." value="" />
+        <span>*
+        </span>
+       </div>
+
+      <div class="col-md-12 col-xs-12">
+       <label for="lastName"></label>
+       <input type="text" class="lastName" name="lastName" placeholder="Ingrese nombre.." value="" /> 
+       <span>*</span>
+      </div>
+
+      <!--<div class="col-md-12 col-xs-12">
+       <label for="gender"></label>
+       <div class="masculino">
+       <input type="radio" name="gender" class="gender" value="M"> Masculino
+       </div>
+       <div class="femenino">
+       <input type="radio" name="gender" class="gender" value="F">  Femenino
+       </div>
+      </div> 
+ 
+      <div class="col-md-12 col-xs-12">
+       <label for="birthday"></label>
+       <input type="date" class="birthday" name="birthday" placeholder="Ingrese fecha de nacimiento.." value=""/> 
+       <span style="display:none;color:#FF0000;width:1%;float:right;font-size:80">*
+       </span>
+      </div> -->
+
+      <div class="col-md-12 col-xs-12">
+       <label for="address"></label>
+       <input type="text" class="address" name="address" placeholder="Ingrese direccion.." value="" /> 
+       <span>*</span>
+      </div>
+
+      <div class="col-md-12 col-xs-12">
+       <label for="email"></label>
+       <input type="mail" name="email" class="email" placeholder="Ej: ejemplo@globallogic.com" required="" value="" />
+       <span>*
+       </span>
+      </div>
+
+      <div class="col-md-12 col-xs-12">
+       <label for="text"></label>
+       <input type="text" name="education" class="text" placeholder="Ingrese educación.. " required="" value="" />
+       <span>*
+       </span>
+      </div>
+
+      <div class="col-md-12 col-xs-12">
+       <label for="text"></label>
+       <input type="text" name="experience" class="text" placeholder="Ingrese experiencia.. " required="" value="" />
+       <span>*
+       </span>
+      </div> 
+
+      <div class="col-md-12 col-xs-12">
+       <label for="photo"></label>
+       <input type="text" name="photo" class="photo" placeholder="Ingrese foto.." required="" value="" />
+       <span>*
+       </span>
+      </div>
+     </div>
+
+     
+
+     
+<!-- 
+    <img  src="fotos/pordefecto.png" class="fotoform" id="foto"/>
+    <p style="color: black;">*La foto se actualiza al guardar.</p>
+
+
+
+    <ul>
+     <! Muestro los datos de los archivos a cargar -->
+     <!--
+           <li ng-repeat="item in uploader.queue">
+            <! nombre del archivo -->
+            <!--
+               Archivo: <span ng-bind="item.file.name"></span><br/>
+               <! imagen del archivo -->
+               <!--
+               <div ng-show="uploader.isHTML5" ng-thumb="{ file: item._file, height: 300 }"></div>
+         <div class="progress" style="">
+                           <div class="progress-bar" role="progressbar" ng-style="{ 'width': uploader.progress + '%' }"></div>
+                       </div>
+               <button type="button" class="btn btn-danger " ng-click="item.remove()">
+                   <span class="glyphicon glyphicon-trash"></span> cambiar
+               </button>
+           </li>  
+       </ul>
+       <input type="file" ng-show="!uploader.queue[0] "nv-file-select uploader="uploader"/>. -->
+
+
+
+       <input type="submit" class="agregar btn btn-info" name="agregar"  value="Guardar" />
+
+   </form> 
+  </div>  
+ </div>
+	</div>
 	<script type="text/javascript" src="/js/jquery-2.2.3.js"></script>
-	<script type="text/javascript" src="/js/cargarGrilla.js"></script>
-
+	<script type="text/javascript" src="/js/app.js" ></script>
+	<script type="text/javascript" src="/js/editar.js" ></script>
 </body>
 </html>

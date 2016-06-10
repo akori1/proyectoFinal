@@ -37,11 +37,20 @@ var service = (function (){
 		 var CREATE_URL = 'http://connectedin.herokuapp.com/person';
 
 		 function createUser(user){
-		  		return $.post({
-		  			url: CREATE_URL,
-		  			data: JSON.stringify(user),
-		  			contentType: 'application/json'
-		  		});
+		  		  $.ajax({
+        url:'http://connectedin.herokuapp.com/person/',
+        method:'POST',
+        contentType: "application/json",
+        data : JSON.stringify(
+            user
+            ),
+        success: function(data){ 
+            alert('Te registraste correctamente, vamos k-po'); 
+        },
+        error: function(){
+            alert ('Faltan ingresar campos');
+        }
+    }); 
 		 }
 
 
