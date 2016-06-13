@@ -1,4 +1,4 @@
-/*.masculino
+.masculino
 {
 	float:left;
 	font-size: 20px;
@@ -32,23 +32,4 @@
 .femenino input
 {
 	color:white;
-}*/
-
-
-.experiencia
-{
-	border:solid black;
-	background-color: grey;
-}
-
-.experiencia h3
-{
-	text-align:center;
-	text-decoration:underline;
-}
-
-.experiencia p
-{
-	color:white;
-	font-size:30px;
 }

@@ -1,0 +1,27 @@
+
+.experiencia
+{
+	border: solid black;
+	background-color: grey;
+}
+
+.experiencia h3
+{
+	color:white;
+	text-decoration: underline;
+	font-size:30px;
+	text-align: center;
+}
+
+.experiencia p
+{
+	color: white;
+	text-decoration:underline;
+	font-size:30px;
+}
+
+.experiencia button
+{
+	color:white;
+	font-size:30px;
+}

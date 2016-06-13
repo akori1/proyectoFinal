@@ -86,5 +86,4 @@ function changeUser (id){
 }
 
 
- 
 botonEditar();

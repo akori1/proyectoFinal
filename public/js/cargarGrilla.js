@@ -35,18 +35,7 @@ function users(data){
 		ruta += getTaskHtml(data[i]);
 	}
 	
-	$('#listaPersonas tbody').append(ruta);
+	$('#listaPersonas').append(ruta);
 }
 
 
-function changeUser (){
-          console.log($(this).data('id'));
-          var persona = [{firstName: 'CAMBIO N', lastName: 'CAMBIO A'}];
-
-          $.ajax({
-          url: 'https://connectedin.herokuapp.com/person/' + $(this).data('id'),
-          method: 'PUT',
-          data: JSON.stringify(persona),
-          contentType:'application/json'
-        })
-        }

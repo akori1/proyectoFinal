@@ -5,7 +5,7 @@
  <meta charset="UTF-8">
  <link rel="stylesheet" type="text/css" href="../css/estilo.css">
  <link rel="stylesheet" type="text/css" href="../css/animacion.css">
-  <link rel="stylesheet" type="text/css" href="../css/EstiloEditar.css">
+
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 <body>
@@ -17,7 +17,7 @@
    
 
       <div class="container">
-
+        
     <div class="col-md-12 col-xs-12 CajaInicio animated bounceInRight cajaArriba">
      <h1>Editar Persona </h1>
 
@@ -73,28 +73,56 @@
        </span>
       </div>
 
-      <div class="col-md-12 col-xs-12 experiencia">
+<!--       <div class="col-md-12 col-xs-12 experiencia">
        <label for="text"></label>
        <h3>Ingrese su experiencia: </h3>
-       <input type="text" name="foto" class="text" placeholder="Suba foto del lugar"/>
-       <input type="text" name="lugar" class="text" placeholder="Lugar donde trabajó"/>
+       <input type="text" name="foto" class="fotoTrabajo" placeholder="Suba foto del lugar"/>
+       <input type="text" name="lugar" class="lugarTrabajo" placeholder="Lugar donde trabajó"/>
        <p> Desde: </p>
-       <input type="date" name="fecha inicio" class="date"/>
+       <input type="date" name="fecha inicio" class="fechaInicioTrabajo"/>
        <p> Hasta: </p>
-       <input type="date" name="fecha final" class="date"/>
-       <input type="text" name="cargo" placeholder="Ingrese su cargo:" class="text"/>
-       <input type="text" name="info" placeholder="Ingrese información del trabajo:" class="text"/>
+       <input type="date" name="fecha final" class="fechaFinTrabajo"/>
+       <input type="text" name="cargo" placeholder="Ingrese su cargo:" class="cargoTrabajo "/>
+       <input type="text" name="info" placeholder="Ingrese información del trabajo:" class="infoTrabajo"/>
       </div> 
-
+ -->
       <div class="col-md-12 col-xs-12">
        <label for="photo"></label>
-       <input type="text" name="photo" class="photo" placeholder="Ingrese foto personal" required="" value="" />
-       <span>*
+       <input type="text" name="photo" class="photo" placeholder="Ingrese foto personal"  value="" />
+       <span>
        </span>
+       <a class='btn btn-danger' name='agregarExp' href="experiencia.html?id=%id%" data-id="%id%" id="agregar"><span class='glyphicon glyphicon-user'>&nbsp;</span>Agregar Experiencia</a></td>
       </div>
      </div>
 
      
+
+     
+<!-- 
+    <img  src="fotos/pordefecto.png" class="fotoform" id="foto"/>
+    <p style="color: black;">*La foto se actualiza al guardar.</p>
+
+
+
+    <ul>
+     <! Muestro los datos de los archivos a cargar -->
+     <!--
+           <li ng-repeat="item in uploader.queue">
+            <! nombre del archivo -->
+            <!--
+               Archivo: <span ng-bind="item.file.name"></span><br/>
+               <! imagen del archivo -->
+               <!--
+               <div ng-show="uploader.isHTML5" ng-thumb="{ file: item._file, height: 300 }"></div>
+         <div class="progress" style="">
+                           <div class="progress-bar" role="progressbar" ng-style="{ 'width': uploader.progress + '%' }"></div>
+                       </div>
+               <button type="button" class="btn btn-danger " ng-click="item.remove()">
+                   <span class="glyphicon glyphicon-trash"></span> cambiar
+               </button>
+           </li>  
+       </ul>
+       <input type="file" ng-show="!uploader.queue[0] "nv-file-select uploader="uploader"/>. -->
 
 
 

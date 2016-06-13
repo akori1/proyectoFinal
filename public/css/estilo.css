@@ -294,3 +294,8 @@ width: 92%;
 {
   color:white;
 }
+
+table 
+{
+  word-break: break-all;
+}
