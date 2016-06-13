@@ -1,69 +1,64 @@
-//   $(function(){
+function validarLogin()
+{
+    var varUsuario= $("#exampleInputEmail1").val();
+    var varClave= $("#exampleInputPassword1").val();
+     
+   
 
-//   var form = $('form');
-//   var email = form.find('#exampleInputEmail1');
-//   var password = form.find('#exampleInputPassword1');
+
+  if (varUsuario === 'juan' && varClave === '123') {
+                    alert('Se inicio sesion');
+                    window.location = "index.html";
+                   }
+                   else 
+                   {
+                    alert('error, inicie nuevamente');
+                   }
+                 
+}
+
+
+
+
+
+
+
+
+
+// $(function(){
+//  var form = $('form'),
+//   email = form.find('input.email'),
+//   password = form.find('input.password');
 
 //  form
 //   .find('input[type=submit]')
 //   .on('click', onClick);
 
-// function onClick(){
-     
-//      debugger;
-    
-//   if (email === 'juan' && password === '123') {
-//                     alert('Se inicio sesion');
+
+//  function onClick(e){
+
+//   e.preventDefault ();           
+//       $.post({
+//        url:'public/html/login',
+//        data:{
+//         email:email.val(),
+//         password:password.val()
+//        },
+//        success: function(data){
+//            if (email === 'juan' && password === '123') {
+//                     console.log('Se inicio sesion');
 //                     window.location.href = "/";
 //                    }
 //                    else 
 //                    {
-//                     alert('error, inicie nuevamente');
+//                     console.log('error, inicie nuevamente');
 //                    }
+//        }
+
+//       });
+//         return false;
+
+
 // }
-// })
 
-
-
-
-
-
-
-
-$(function(){
- var form = $('form'),
-  email = form.find('input.email'),
-  password = form.find('input.password');
-
- form
-  .find('input[type=submit]')
-  .on('click', onClick);
-
-
- function onClick(e){
-
-  e.preventDefault ();           
-      $.post({
-       url:'html/login',
-       data:{
-        email:email.val(),
-        password:password.val()
-       },
-       success: function(data){
-           if (email === 'juan' && password === '123') {
-                    console.log('Se inicio sesion');
-                    window.location.href = "/";
-                   }
-                   else 
-                   {
-                    console.log('error, inicie nuevamente');
-                   }
-       }
-
-      });
-        return false;
-
-
-}
-
-});
+// });
