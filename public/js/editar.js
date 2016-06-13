@@ -33,12 +33,13 @@ function botonEditar () {
              ),
    success: function(data){ 
             alert('Usuario Modificado'); 
-
+            location.href="grilla.html";
 
         },
         error: function(){
             alert('Faltan ingresar campos');
         }
+     
   });  
         
     }

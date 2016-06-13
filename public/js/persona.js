@@ -46,6 +46,7 @@ var service = (function (){
             ),
         success: function(data){ 
             alert('Te registraste correctamente, vamos k-po'); 
+            location.href="/index.html";
         },
         error: function(){
             alert ('Faltan ingresar campos');

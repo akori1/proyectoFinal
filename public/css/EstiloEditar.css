@@ -1,0 +1,54 @@
+/*.masculino
+{
+	float:left;
+	font-size: 20px;
+	font-style: bold;
+	border: 10px solid white;
+	padding-left:100px;
+}
+.femenino
+{
+	float:right;
+	font-size: 20px;
+	font-style: bold;
+	border: 10px solid white;
+	padding-right:100px;
+}
+
+.container span
+{
+	display:none;
+	color:#FF0000;
+	width:1%;
+	float:right;
+	font-size:80;
+}
+
+.masculino input
+{
+	color:white;
+}
+
+.femenino input
+{
+	color:white;
+}*/
+
+
+.experiencia
+{
+	border:solid black;
+	background-color: grey;
+}
+
+.experiencia h3
+{
+	text-align:center;
+	text-decoration:underline;
+}
+
+.experiencia p
+{
+	color:white;
+	font-size:30px;
+}

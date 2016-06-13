@@ -1,27 +1,41 @@
-$("#template-usuario").load("/templates/template-verUsuario.html");
+// $("#template-usuario").load("/templates/template-verUsuario.html");
+
 
 var url = location.search;
 var dividir = url.split("=");
 var id = dividir[1];
 var firstName;
-console.log (id);
+//console.log (id);
 
 function changeUser (id){
     var url= 'http://connectedin.herokuapp.com/person/%id%';
         url = url.replace (/%id%/g,id);
-        console.log (url);
+      //  console.log (url);
     $.get(url, function(data){
-     
-     console.log (data);
-     
-     var firstName = $('firstName').val(data.firstName);
-     $('.lastName').val(data.lastName);
-     $('.address').val(data.address);
-     $('.email').val(data.email);
-     $('.education').val(data.education);
-     $('.experience').val(data.experience);
-    $('.photo').val(data.photo);
-  });
+    replaceUser (data);
+    
+  }
+);
+}
+
+function replaceUser (data) {
+    $.get( "/templates/template-verUsuario.html", function( contenido ) {
+ // $( "#template-usuario" ).html( verUsuario );
+ // var verUsuario = data.replace(/%id%/g,id);
+ //console.log (data);
+ replace (contenido, data);
+ //console.log (data);
+});
+
+}
+
+function replace (contenido ,data) {
+  var usuario = contenido
+    .replace(/%firstName%/g,data.firstName)
+    .replace(/%lastName%/g,' ' +data.lastName)
+    .replace(/%address%/g,' ' + data.address)
+    .replace(/%email%/g,' ' + data.email)
+  $( "#template-usuario" ).html(usuario);;
 }
 
 changeUser(id);

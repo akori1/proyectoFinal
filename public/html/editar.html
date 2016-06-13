@@ -1,21 +1,22 @@
 <html>
 <head>
-	<title>Editar</title>
+ <title>Editar</title>
 
-	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="../css/estilo.css">
-	<link rel="stylesheet" type="text/css" href="../css/animacion.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+ <meta charset="UTF-8">
+ <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+ <link rel="stylesheet" type="text/css" href="../css/animacion.css">
+  <link rel="stylesheet" type="text/css" href="../css/EstiloEditar.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 <body>
 
-	<div class="template-menu container" id="template-menu">
-	
-		
-	</div>	
-			
+ <div class="template-menu container" id="template-menu">
+ 
+  
+ </div> 
+   
 
-			   <div class="container">
+      <div class="container">
 
     <div class="col-md-12 col-xs-12 CajaInicio animated bounceInRight cajaArriba">
      <h1>Editar Persona </h1>
@@ -67,54 +68,33 @@
 
       <div class="col-md-12 col-xs-12">
        <label for="text"></label>
-       <input type="text" name="education" class="text" placeholder="Ingrese educación.. " required="" value="" />
+       <input type="text" name="education" class="text" placeholder="Ingrese educación.. " value="" />
        <span>*
        </span>
       </div>
 
-      <div class="col-md-12 col-xs-12">
+      <div class="col-md-12 col-xs-12 experiencia">
        <label for="text"></label>
-       <input type="text" name="experience" class="text" placeholder="Ingrese experiencia.. " required="" value="" />
-       <span>*
-       </span>
+       <h3>Ingrese su experiencia: </h3>
+       <input type="text" name="foto" class="text" placeholder="Suba foto del lugar"/>
+       <input type="text" name="lugar" class="text" placeholder="Lugar donde trabajó"/>
+       <p> Desde: </p>
+       <input type="date" name="fecha inicio" class="date"/>
+       <p> Hasta: </p>
+       <input type="date" name="fecha final" class="date"/>
+       <input type="text" name="cargo" placeholder="Ingrese su cargo:" class="text"/>
+       <input type="text" name="info" placeholder="Ingrese información del trabajo:" class="text"/>
       </div> 
 
       <div class="col-md-12 col-xs-12">
        <label for="photo"></label>
-       <input type="text" name="photo" class="photo" placeholder="Ingrese foto.." required="" value="" />
+       <input type="text" name="photo" class="photo" placeholder="Ingrese foto personal" required="" value="" />
        <span>*
        </span>
       </div>
      </div>
 
      
-
-     
-<!-- 
-    <img  src="fotos/pordefecto.png" class="fotoform" id="foto"/>
-    <p style="color: black;">*La foto se actualiza al guardar.</p>
-
-
-
-    <ul>
-     <! Muestro los datos de los archivos a cargar -->
-     <!--
-           <li ng-repeat="item in uploader.queue">
-            <! nombre del archivo -->
-            <!--
-               Archivo: <span ng-bind="item.file.name"></span><br/>
-               <! imagen del archivo -->
-               <!--
-               <div ng-show="uploader.isHTML5" ng-thumb="{ file: item._file, height: 300 }"></div>
-         <div class="progress" style="">
-                           <div class="progress-bar" role="progressbar" ng-style="{ 'width': uploader.progress + '%' }"></div>
-                       </div>
-               <button type="button" class="btn btn-danger " ng-click="item.remove()">
-                   <span class="glyphicon glyphicon-trash"></span> cambiar
-               </button>
-           </li>  
-       </ul>
-       <input type="file" ng-show="!uploader.queue[0] "nv-file-select uploader="uploader"/>. -->
 
 
 
@@ -123,9 +103,9 @@
    </form> 
   </div>  
  </div>
-	</div>
-	<script type="text/javascript" src="/js/jquery-2.2.3.js"></script>
-	<script type="text/javascript" src="/js/app.js" ></script>
-	<script type="text/javascript" src="/js/editar.js" ></script>
+ </div>
+ <script type="text/javascript" src="/js/jquery-2.2.3.js"></script>
+ <script type="text/javascript" src="/js/app.js" ></script>
+ <script type="text/javascript" src="/js/editar.js" ></script>
 </body>
 </html>
