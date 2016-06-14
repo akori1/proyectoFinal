@@ -19,7 +19,8 @@ function botonEditar () {
             photo : $('.photo').val(),
             email : $('.email').val(),
             education:$('.education').val(),
-            experience:$('.experience').val()
+            experience:$('.experience').val(),
+            summary:$('.summary').val()
         }
          var url= 'http://connectedin.herokuapp.com/person/%id%';
         url = url.replace (/%id%/g,id);
@@ -64,7 +65,9 @@ function changeUser (id){
      $('.education').val(data.education);
      $('.experience').val(data.experience);
     $('.photo').val(data.photo);
- 
+    $('.summary').val(data.summary);
+    $('#agregar').attr("data-id",id);
+    $('#agregar').attr("href",'experiencia.html?id='+id);
 
    });
 
@@ -80,6 +83,7 @@ function changeUser (id){
     .replace (/%address%/g,usuario.address)
     .replace (/%photo%/g,usuario.photo)
     .replace (/%email%/g,usuario.email)
+    .replace (/%summary%/g,usuario.summary)
     .replace (/%botonEditar%/g,usuario._id);
 }
 
