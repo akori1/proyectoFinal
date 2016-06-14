@@ -299,3 +299,6 @@ table
 {
   word-break: break-all;
 }
+
+
+#map { width: 100%; height: 100%; }

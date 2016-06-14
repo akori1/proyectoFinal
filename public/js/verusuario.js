@@ -41,11 +41,13 @@ function replace (contenido ,data) {
     .replace(/%email%/g,' ' + data.email)
     .replace(/%summary%/g,' ' + data.summary)
     .replace(/%experience%/g,' ' + data.experience)
-  $( "#template-usuario" ).html(usuario);;
+    .replace(/%photo%/g,' ' + data.photo)
+    
+  $( "#template-usuario" ).html(usuario);
 }
 
 function cargaAbout (data) {
-     $.get( "/templates/template-about.html", function( contenido ) {
+  $.get( "/templates/template-about.html", function( contenido ) {
   var usuario = contenido
  .replace(/%firstName%/g,data.firstName)
  .replace(/%summary%/g,data.summary)
@@ -69,19 +71,37 @@ function cargaExperience (data) {
 
 });}
 
+function cargaLocation (data) {
+$( "#template-about").empty();
+$.get("/templates/template-location.html", function( contenido ) {
+  var usuario = contenido;
 
-/*
-function links (id, dataUser) {
-   // $('.about')
-   // .on('click', cargaAbout (dataUser));
-    $('#experience')
-    .click(
-    function(){
-     alert('Click event is fired');
-    }
-  )
+//.replace(/%firstName%/g,data.firstName)
+//.replace(/%summary%/g,data.summary)
+ $("#template-about").html(usuario)})
+//}}
 }
 
-*/
+$(document).ready(function() {
+  $('body')
+  .on('click','#about',  function(e) {
+   e.preventDefault();
+   cargaAbout(dataUser);
+  })
+  .on('click','#experience',  function(e) {
+   e.preventDefault();
+   alert('experience');
+  })
+  .on('click','#location',  function(e) {
+   e.preventDefault();
+   cargaLocation(dataUser);
+   
+  })
+  .on('click','#mapa',  function(e) {
+   e.preventDefault();
+   alert('mapa');
+  });
+});
+
+
 changeUser(id);
-//links (id, dataUser);
