@@ -40,7 +40,7 @@ function replace (contenido ,data) {
     .replace(/%address%/g,' ' + data.address)
     .replace(/%email%/g,' ' + data.email)
     .replace(/%summary%/g,' ' + data.summary)
-    .replace(/%experience%/g,' ' + data.experience)
+    .replace(/%experience%/g,' ' + data.experience[0].cargoTrabajo + ' en ' + data.experience[0].lugarTrabajo)
     .replace(/%photo%/g,' ' + data.photo)
     
   $( "#template-usuario" ).html(usuario);

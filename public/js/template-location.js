@@ -45,3 +45,4 @@ function openInfoWindow(marker) {
     ].join(''));
     infoWindow.open(map, marker);
 }
+
