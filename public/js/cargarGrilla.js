@@ -23,7 +23,8 @@ function getTaskHtml(data){
 	.replace(/%birthday%/gi, data.birthday)
 	.replace(/%address%/gi, data.address)
 	.replace(/%email%/gi, data.email)
-	.replace(/%password%/gi, data.password);
+	.replace(/%password%/gi, data.password)
+	.replace(/%summary%/gi,data.summary);
 
 }
 
