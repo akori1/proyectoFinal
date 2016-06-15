@@ -34,15 +34,28 @@ function replaceUser (data) {
 }
 
 function replace (contenido ,data) {
+  if (data.experience.length ==0) {
   var usuario = contenido
     .replace(/%firstName%/g,data.firstName)
     .replace(/%lastName%/g,' ' +data.lastName)
     .replace(/%address%/g,' ' + data.address)
     .replace(/%email%/g,' ' + data.email)
     .replace(/%summary%/g,' ' + data.summary)
-    .replace(/%experience%/g,' ' + data.experience[0].cargoTrabajo + ' en ' + data.experience[0].lugarTrabajo)
     .replace(/%photo%/g,' ' + data.photo)
+    .replace(/%experience%/g,' ');
+
+    }else {
+    var usuario = contenido
+    .replace(/%firstName%/g,data.firstName)
+    .replace(/%lastName%/g,' ' +data.lastName)
+    .replace(/%address%/g,' ' + data.address)
+    .replace(/%email%/g,' ' + data.email)
+    .replace(/%summary%/g,' ' + data.summary)
+    .replace(/%photo%/g,' ' + data.photo)
+    .replace(/%experience%/g,' ' + data.experience[0].cargoTrabajo + ' en ' + data.experience[0].lugarTrabajo);
     
+    }
+  
   $( "#template-usuario" ).html(usuario);
 }
 
