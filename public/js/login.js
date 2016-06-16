@@ -14,7 +14,7 @@ console.log('entre aca');
 
   if (varUsuario === 'juan' && varClave === '123') {
                     alert('Se inicio sesion');
-                    location.href="/index.html";
+                    location.href="/html/grilla.html";
                    }
                    else 
                    {

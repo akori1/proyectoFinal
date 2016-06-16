@@ -4,13 +4,15 @@ var id = dividir[1];
 var url= 'http://connectedin.herokuapp.com/person/%id%';
         url = url.replace (/%id%/g,id);
 var algo=[];
+var dataUser;
 var i=-1;
 
 function botonAgregar () {
     traer_Datos(id);
-    
+    console.log(i);
     $('#button')
     .on('click', agregarExp);
+    
 
     function traer_Datos(id){
         $.get({
@@ -18,9 +20,12 @@ function botonAgregar () {
             data:{       
              },
          success:function(data){
-           // algo= data;
-           // console.log('metodo get',algo);
-           
+          console.log(data);
+          dataUser=data.experience;
+          console.log(dataUser);
+          algo=dataUser;
+          i=data.experience.length-1;
+         
 
           }  
 
@@ -28,6 +33,7 @@ function botonAgregar () {
     }
 
     function agregarExp(e){ 
+        console.log(algo);
         e.preventDefault ();
      var exp=
         {
@@ -38,9 +44,8 @@ function botonAgregar () {
             cargoTrabajo:$('.cargoTrabajo').val(),
             infoTrabajo:$('.infoTrabajo').val(),
         };
-        i++;
-       algo[i]=exp;
-        console.log('imprime antes del put',algo[i]);
+       
+       
      
 
       var registro = {
@@ -53,56 +58,31 @@ function botonAgregar () {
             experience:algo
         }
         
+        if(exp.fotoTrabajo.length>0 && exp.lugarTrabajo.length>0 && exp.fechaInicioTrabajo.length>0 &&
+        exp.fechaFinTrabajo.length>0 && exp.cargoTrabajo.length>0 && exp.infoTrabajo.length>0) 
+        {
+           i++ 
+           algo[i]=exp;
+           console.log(i);
+           console.log('imprime antes del put',algo[i]);
 
-        
-        
-         $.ajax({
+
+          $.ajax({     
             url:url,
-            method:'PUT',
-            contentType: "application/json",
-            data : JSON.stringify(registro
-                     ),
-           success: function(data){ 
-                    alert('Experiencia Agregada'); 
-                    console.log('CARGO EXPERIENCIA:');
-                    console.log(exp);
-                  //  console.log(data);
-                },
-           error: function(){
-                    alert('Faltan ingresar campos');
-                }
+            method:'PUT',     
+            contentType: "application/json",     
+            data : JSON.stringify(registro),
+            success: function(data){
+                                   alert('Experiencia Agregada'); 
+                                                                     
+                              },
           }); 
-        
+        }
+        else
+        {
+          alert('Faltan ingresar campos');
+        }
     }
-};/*
-function obtengoFormulario()
-{
-
- var url = 'http://connectedin.herokuapp.com/person/%id%';
-        url = url.replace (/%id%/g,id);
-        console.log (url);
-      $.get(url,function(data){
-
-
-
-
-
-
-
-
-
-
-
-      })
-
-
-
-}*/
-
-
-
-
-
-
+};
 
 botonAgregar();

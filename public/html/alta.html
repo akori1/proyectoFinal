@@ -1,0 +1,102 @@
+<html>
+<head>
+	<title>Conectedin</title>
+
+
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="/css/estilo.css">
+	<link rel="stylesheet" type="text/css" href="/css/animacion.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="icon" href="https://static.licdn.com/scds/common/u/images/logos/favicons/v1/favicon.ico">
+	<style>
+		#templates{
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="template-menu container" id="template-menu">
+	
+		
+	</div>	
+
+			<div class="container">
+
+				<div class="col-md-12 col-xs-12 CajaInicio animated bounceInRight cajaArriba">
+					<h1>ABM - Persona </h1>
+
+					<form id="form-control"  enctype="multipart/form-data" >
+						<div class="row">
+							<div class="col-md-12 col-xs-12">
+								<label for="firstName"></label>
+								<input type="text" class="firstName" name="firstName" placeholder="Ingrese apellido.." value="" />
+								<span  style="display:none;color:#FF0000;width:1%;float:right;font-size:80">*
+								</span>
+							</div>
+
+						<div class="col-md-12 col-xs-12">
+							<label for="lastName"></label>
+							<input type="text" class="lastName" name="lastName" placeholder="Ingrese nombre.." value="" /> 
+							<span  style="display:none;color:#FF0000;width:1%;float:right;font-size:80">*</span>
+						</div>
+
+						<div class="col-md-12 col-xs-12">
+							<label for="gender"></label>
+							<input type="radio" name="gender" class="gender" value="M"  style="color:white;">Masculino<br>
+							<input type="radio" name="gender" class="gender" value="F"  style="color:white;">Femenino<br>
+						</div>	
+
+						<div class="col-md-12 col-xs-12">
+							<label for="birthday"></label>
+							<input type="date" class="birthday" name="birthday" placeholder="Ingrese fecha de nacimiento.." value=""/> 
+							<span style="display:none;color:#FF0000;width:1%;float:right;font-size:80">*
+							</span>
+						</div>
+
+						<div class="col-md-12 col-xs-12">
+							<label for="address"></label>
+							<input type="text" class="address" name="address" placeholder="Ingrese direccion.." value="" /> 
+							<span  style="display:none;color:#FF0000;width:1%;float:right;font-size:80">*</span>
+						</div>
+
+						<div class="col-md-12 col-xs-12">
+							<label for="email"></label>
+							<input type="mail" name="email" class="email" placeholder="Ej: ejemplo@globallogic.com" required="" value="" />
+							<span  style="display:none;color:#FF0000;width:1%;float:right;font-size:80">*
+							</span>
+						</div>
+
+						<div class="col-md-12 col-xs-12">
+							<label for="password"></label>
+							<input type="password" name="password" class="password" placeholder="Ingrese password.. " required="" value="" />
+							<span  style="display:none;color:#FF0000;width:1%;float:right;font-size:80">*
+							</span>
+						</div>
+
+						<div class="col-md-12 col-xs-12">
+							<label for="password"></label>
+							<input type="password" name="password" class="password" placeholder="Ingrese nuevamente su password.. " required="" value="" />
+							<span  style="display:none;color:#FF0000;width:1%;float:right;font-size:80">*
+							</span>
+						</div> 
+
+						<div class="col-md-12 col-xs-12">
+							<label for="photo"></label>
+							<input type="text" name="photo" class="photo" placeholder="Ingrese foto.." required="" value="" />
+							<span  style="display:none;color:#FF0000;width:1%;float:right;font-size:80">*
+							</span>
+						</div>
+					</div>
+
+			    <input type="submit" class="agregar btn btn-info" name="agregar"  value="Guardar" />
+
+			</form>	
+		</div>		
+	</div>
+	<script type="text/javascript" src="/js/jquery-2.2.3.js"></script>
+	<script type="text/javascript" src="/js/app.js" ></script>
+	<script type="text/javascript" src="/js/persona.js" ></script>
+</body>
+</html>
